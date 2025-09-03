@@ -964,12 +964,20 @@ require('lazy').setup({
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
 
-  -- Forces me to get good at Neovim
+  -- Forces me to get good at Neovim.
   {
     'm4xshen/hardtime.nvim',
     lazy = false,
     dependencies = { 'MunifTanjim/nui.nvim' },
-    opts = {},
+    opts = {
+      -- I want to be able to use the arrow keys while in any mode but normal.
+      disabled_keys = {
+        ['<Up>'] = false,
+        ['<Down>'] = false,
+        ['<Left>'] = false,
+        ['<Right>'] = false,
+      },
+    },
   },
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
