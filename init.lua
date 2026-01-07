@@ -703,6 +703,7 @@ require('lazy').setup({
             },
           },
         },
+        neocmakelsp = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -985,6 +986,13 @@ require('lazy').setup({
       },
     },
   },
+  -- Adds CMake tools to Neovim.
+  {
+    'Civitasv/cmake-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = {},
+  },
+
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
